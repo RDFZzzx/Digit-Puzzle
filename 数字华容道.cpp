@@ -800,7 +800,7 @@ void Play_game()
 		else if (tot_step <= game[playing].step * 5) point = 2;
 		else point = 1;
 		if (playing == lev) ++lev;
-		if (point > grade[playing])
+		if (point > grade[playing] && Lock[playing] == 0)
 		{
 			rate += (point - grade[playing]);
 			grade[playing] = point;
